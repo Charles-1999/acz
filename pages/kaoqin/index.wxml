@@ -1,0 +1,57 @@
+<!--pages/kaoqin/index.wxml-->
+<view class="header">
+	<scroll-view class="tab-head" scroll-x="true" enable-flex>
+		<view class="tab-item {{currentTab===index?'active':''}}" wx:for="{{tab}}" wx:key="id" bindtap="switchNav" data-index="{{index}}">
+			{{item.title}}
+		</view>
+	</scroll-view>
+	<searchBar></searchBar>
+	<view class="picker_warp">
+		<view class="selector">
+			<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+				<view class="picker">
+					<view>{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}</view>
+					<view class="iconfont icon-banji"></view>
+				</view>
+			</picker>
+		</view>
+		<view class="date">
+			<picker mode="date" value="{{date}}" start="2018-09-01" end="2022-09-01" bindchange="bindDateChange">
+				<view class="picker">
+					<view>{{date}}</view>
+					<view class="iconfont icon-riqiqishu"></view>
+				</view>
+			</picker>
+		</view>
+	</view>
+</view>
+
+<swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{swiperHeight}}">
+	<swiper-item>
+		<view class="stu_list">
+			<view class="stu_warp" wx:for="{{stus}}" wx:key="stuNo">
+				<view class="head_portrait">
+					<image src="{{item.headPortraitUrl}}"></image>
+				</view>
+				<view class="name_warp">{{item.stuName}}</view>
+        <view class="state" bindtap="stateChange" data-no="{{item.stuNo}}">
+          <view id="0" class="{{item.state==0?'active':''}}">在校</view>
+          <view id="1" class="{{item.state==1?'active':''}}">离校</view>
+          <view id="2" class="{{item.state==2?'active':''}}">请假</view>
+        </view>
+			</view>
+		</view>
+	</swiper-item>
+	<swiper-item class="history">
+		<view class="title">
+			<view class="name">姓名</view>
+			<view class="dateTime">日期时间</view>
+			<view class="state">状态</view>
+		</view>
+		<view class="data_warp" wx:for="{{stuStateList}}" wx:key="id">
+			<view class="name">{{item.sName}}</view>
+			<view class="dateTime">{{item.datetime}}</view>
+			<view class="state">{{item.state}}</view>
+		</view>
+	</swiper-item>
+</swiper>

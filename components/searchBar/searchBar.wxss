@@ -1,0 +1,28 @@
+/* components/searchBar/searchBar.wxss */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #f1f6fe;
+}
+
+.search .input {
+  flex: 1;
+  height: 50rpx;
+  padding-left: 30rpx;
+  border: 1px solid var(--themeColor);
+  border-radius: 20rpx;
+  line-height: 50rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.search .button {
+  display: flex;
+  align-items: center;
+  height: 50rpx;
+  margin: 0 0 0 10rpx;
+  background-color: var(--themeColor);
+  color: #fff;
+}

@@ -1,0 +1,131 @@
+/* pages/pj_in/index.wxss */
+page {
+  margin-top: 170rpx;
+  background-color: #f1f6fe;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 170rpx;
+  background-color: #f1f6fe;
+  z-index: 999;
+}
+
+.header .name {
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border-bottom: 1px solid #eee;
+  /* background-color: #fff; */
+}
+
+.tab-head {
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.tab-item {
+  display: inline-block;
+  padding: 0 40rpx;
+  font-size: 32rpx;
+}
+
+.tab-item.active {
+  position: relative;
+  color: var(--themeColor);
+  font-weight: 700;
+}
+
+.tab-item.active::after {
+  content: "";
+  display: block;
+  height: 8rpx;
+  width: 80%;
+  background: var(--themeColor);
+  position: absolute; 
+  bottom: 0;
+  left: 50%;
+  border-radius: 16rpx;
+  transform: translate(-50%);
+}
+
+.tab-content {
+  height: 100%;
+}
+
+.section {
+  margin: 20rpx;
+  padding: 20rpx;
+  /* border-bottom: 1px solid #eee; */
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 0rpx 10rpx 1rpx #eee;
+}
+
+.section .bigtitle {
+  margin-bottom: 20rpx;
+  color: #3e3e3e;
+  font-size: 32rpx;
+}
+
+.section .star {
+  width: 40%;
+  margin-left: 20rpx;
+}
+
+.section .star image {
+  width: 100%;
+}
+
+.footer_bar {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.footer_bar .save {
+  flex: 2;
+}
+
+.footer_bar .save button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80rpx;
+  padding: 0;
+  color: #fff;
+  background-color: var(--themeColor);
+}
+
+.footer_bar .prev,
+.footer_bar .next {
+  display: flex;
+  align-items: center;
+  width: 80rpx;
+  height: 80rpx;
+  color: var(--themeColor)
+}
+
+.footer_bar .iconfont {
+  font-size: 80rpx;
+}

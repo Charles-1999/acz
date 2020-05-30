@@ -1,0 +1,65 @@
+/* pages/pj_details/index.wxss */
+page {
+  background-color: #f1f6fe;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40rpx;
+}
+
+.head_portrait {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+  overflow: hidden;
+}
+
+.head_portrait image {
+  width: 100%;
+  height: 100%;
+}
+
+.info_warp .name {
+  margin-bottom: 20rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.section {
+  margin: 40rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 0rpx 10rpx 1rpx #eee;
+}
+
+.section .title {
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+
+.section .content {
+  /* display: flex; */
+  margin: 20rpx 0;
+}
+
+.section .content .text {
+  margin-bottom: 20rpx;
+  color: #3e3e3e;
+  font-size: 32rpx
+}
+
+.section .content .stars {
+  margin-left: 20rpx;
+  width: 40%;
+}
+
+.section .content .stars image {
+  width: 100%;
+}

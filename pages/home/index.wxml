@@ -1,0 +1,18 @@
+<!--pages/home/index.wxml-->
+<view class="swiper">
+  <swiper autoplay indicator-dots circular>
+    <swiper-item wx:for="{{images}}" wx:key="id">
+      <view class="swiper_item">{{item.content}}</view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="main">
+  <block wx:for="{{item}}" wx:key="id">
+    <navigator class="item" url="{{item.url}}">
+        <!-- <view class="iconfont {{item.className}}"></view> -->
+        <image src="{{item.icon}}"></image>
+        <view class="item_title">{{item.title}}</view> 
+    </navigator>
+  </block>
+</view>

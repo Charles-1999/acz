@@ -1,0 +1,5 @@
+<!--components/searchBar/searchBar.wxml-->
+<view class="search">
+	<input class="input" placeholder="搜索学生学号 \\ 姓名"></input>
+	<button class="button" size="mini">搜索</button>
+</view>

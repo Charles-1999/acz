@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "searchBar": "../../components/searchBar/searchBar"
+  },
+  "navigationBarTitleText": "考勤管理"
+}

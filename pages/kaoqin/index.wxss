@@ -1,0 +1,167 @@
+/* pages/kaoqin/index.wxss */
+.tab-head {
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.tab-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 15rpx 0;
+}
+
+.tab-item.active {
+  position: relative;
+  color: var(--themeColor);
+  font-weight: 700;
+}
+
+.tab-item.active::after {
+  content: "";
+  display: block;
+  height: 8rpx;
+  width: 80%;
+  background: var(--themeColor);
+  position: absolute; 
+  bottom: 0;
+  left: 50%;
+  border-radius: 16rpx;
+  transform: translate(-50%);
+}
+
+.header .picker_warp {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.picker_warp .selector,
+.picker_warp .date {
+  padding: 0rpx 20rpx;
+  /* border: 1px solid var(--themeColor); */
+  /* background-color: #f4f4f4; */
+}
+
+.picker_warp .picker {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+
+.icon-banji {
+  font-size: 50rpx;
+  margin-left: 10rpx;
+  color: var(--themeColor);
+  font-weight: 700;
+}
+
+.icon-riqiqishu {
+  font-size: 34rpx;
+  margin-left: 10rpx;
+  color: var(--themeColor);
+  font-weight: 700;
+}
+
+.stu_list .stu_warp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+  padding: 0 20rpx;
+}
+
+.stu_warp .head_portrait {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 30rpx 0 10rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.stu_warp .head_portrait image {
+  width: 100%;
+  height: 100%;
+}
+
+.stu_warp .name_warp {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  font-size: 36rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.stu_warp .state {
+  position: absolute;
+  right: 0;
+  display: flex;
+  margin-right: 20rpx;
+}
+
+.stu_warp .state view {
+  border: 1px solid #E9EBEE;
+  padding: 10rpx 20rpx;
+}
+
+.stu_warp .state view:nth-child(1).active {
+  background-color: #c9dcfc;
+}
+.stu_warp .state view:nth-child(2).active {
+  background-color: #a7e9af;
+}
+.stu_warp .state view:nth-child(3).active {
+  background-color: #fef09f;
+}
+
+.title,
+.data_warp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+}
+
+.title view,
+.data_warp view {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 20rpx;
+  border-bottom: 1px solid #bbd2f9;
+}
+
+.title view {
+  border-right: 1px solid #bbd2f9;
+  font-weight: 700;
+  font-size: 30rpx;
+}
+
+.history .name,
+.history .dateTime {
+  border-right: 1px solid #bbd2f9;
+}
+
+.history .dateTime {
+  flex: 2;
+}
+
+.data_warp:nth-child(even) {
+  background-color: #c9dcfc;
+}

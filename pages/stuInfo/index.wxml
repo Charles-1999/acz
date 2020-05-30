@@ -1,0 +1,31 @@
+<!-- pages/stuInfo/index.wxml -->
+<searchBar></searchBar>
+<view class="selector">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}</view>
+  </picker>
+</view>
+<view class="stuList">
+  <view class="warp" wx:for="{{stus}}" wx:key="stuNo">
+    <movable-area>
+      <movable-view out-of-bounds="{{true}}" direction="horizontal" inertia="{{true}}">
+        <view class="item" bindtap="handleTap" data-no="{{item.stuNo}}">
+          <view class="head_portrait">
+            <image src="{{item.headPortraitUrl}}"></image>
+          </view>
+          <view class="info">
+            <view class="left">
+              <view class="name">{{item.stuName}}</view>
+              <view class="sex">性别：{{item.stu_details.sex}}</view>
+            </view>
+            <view class="right">
+              <view class="stuNo">学号：{{item.stuNo}}</view>
+              <view class="phone">紧急联系号码：{{item.stu_details.parents.phone}}</view>
+            </view>
+          </view>
+        </view>
+      </movable-view>
+    </movable-area>
+    <view class="contact">联系家长</view>
+  </view>
+</view>

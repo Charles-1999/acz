@@ -1,0 +1,27 @@
+<!--pages/stuDetail/index.wxml-->
+<view>
+  <view class="head_warp">
+    <view class="head_portrait">
+      <image src="{{info.headPortraitUrl}}"></image>
+    </view>
+    <view class="name">{{info.stuName}}</view>
+  </view>
+  <view class="info_warp">
+    <view class="self_info">
+      <view class="title">个人信息</view>
+      <view class="content">学号：{{info.stuNo}}</view>
+      <view class="content">年级：{{info.grade}}</view>
+      <view class="content">班级：{{info.classes}}</view>
+      <view class="content">年龄：{{info.stu_details.age}}</view>
+      <view class="content">性别：{{info.stu_details.sex}}</view>
+      <view class="content">身份证：{{info.stu_details.IDNum}}</view>
+      <view class="content">家庭住址：{{info.stu_details.address}}</view>
+      <view class="content">入学日期：{{info.stu_details.inDate}}</view>
+    </view>
+    <view class="parent_info">
+      <view class="title">父母信息</view>
+      <view class="content">家长姓名：{{info.stu_details.parents.name}}</view>
+      <view class="content">家长电话：{{info.stu_details.parents.phone}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "searchBar": "../../components/searchBar/searchBar"
+  },
+  "navigationBarTitleText": "学生信息",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

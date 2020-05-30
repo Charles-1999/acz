@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tab":"../../components/tab/tab",
+    "searchBar": "../../components/searchBar/searchBar"
+  },
+  "navigationBarTitleText": "评价系统",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

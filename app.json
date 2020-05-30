@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/pj/index",
+    "pages/pj_in/index",
+    "pages/pj_details/index",
+    "pages/stuInfo/index",
+    "pages/stuDetail/index",
+    "pages/kaoqin/index",
+    "pages/user/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "爱成长",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#26baee",
+    "backgroundColor": "#f1f1f1",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/index",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home-on.png"
+      },{
+        "text": "我的",
+        "pagePath": "pages/user/index",
+        "iconPath": "icons/用户.png",
+        "selectedIconPath": "icons/用户-on.png"
+      }
+    ]
+  }
+}

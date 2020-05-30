@@ -1,0 +1,96 @@
+/* pages/stuInfo/index.wxss */
+.selector {
+  height: 90rpx;
+  font-size: 32rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.selector picker {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 90rpx;
+}
+
+.stuList .warp {
+  display: flex;
+  height: 150rpx;
+}
+
+.stuList movable-area {
+  width: 532rpx;
+  height: 100%;
+}
+
+.stuList movable-view {
+  width: 750rpx;
+  height: 100%;
+}
+
+.stuList .item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.stuList .item .head_portrait {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.stuList .item .head_portrait image {
+  width: 100%;
+  height: 100%;
+}
+
+.stuList .item .info {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.stuList .item .info .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100rpx;
+  margin: 0 40rpx 0 30rpx;
+}
+
+.stuList .item .info .left .name {
+  font-size: 34rpx;
+}
+
+.stuList .item .info .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100rpx;
+}
+
+.stuList .item .info .right .stuNo {
+  margin-top: 8rpx;
+}
+
+.stuList .item .info .right .phone {
+  color: #666;
+}
+
+.stuList .contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300rpx;
+  height: 100%;
+  font-size: 36rpx;
+  /* font-weight: 700; */
+  color: #fff;
+  background-color: #e55555;
+}

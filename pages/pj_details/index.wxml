@@ -1,0 +1,22 @@
+<!--pages/pj_details/index.wxml-->
+<view class="header">
+  <view class="head_portrait">
+    <image src="{{stuInfo.headPortraitUrl}}"></image>
+  </view>
+  <view class="info_warp">
+    <view class="name">{{stuInfo.stuName}}</view>
+    <view class="classes">{{stuInfo.grade}} / {{stuInfo.classes}} / 语文</view>
+  </view>
+</view>
+
+<view class="main">
+  <view class="section">
+    <view class="title">课堂表现</view>
+    <view class="content" wx:for="{{pjContent}}" wx:key="id">
+      <view class="text">{{item.content}}</view>
+      <view class="stars">
+        <image src="{{item.starSrc}}" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</view>

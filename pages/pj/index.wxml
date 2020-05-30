@@ -1,0 +1,65 @@
+<!--pages/pj/index.wxml-->
+<tab tab="{{tab}}" bindtabItemChange="handleTabItemChange">
+  <searchBar></searchBar>
+  <view class="selector">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker">
+          {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}，{{multiArray[3][multiIndex[3]]}}
+        </view>
+      </picker>
+    </view>
+  <!-- 学生评价 -->
+  <block wx:if="{{tab[0].isActive}}">
+    <!-- stu_list -->
+    <view class="stu_list">
+      <view class="stu_container" wx:for="{{stus}}" wx:key="stuNo">
+        <checkbox-group bindchange="handleCheckedChange" data-stu_no="{{item.stuNo}}">
+          <label class="stu_warp">
+            <view class="stu_checkbox">
+              <checkbox checked="{{item.checked}}"></checkbox>
+            </view>
+            <view class="head_portrait">
+              <image src="{{item.headPortraitUrl}}"></image>
+            </view>
+            <view class="name_warp">
+              {{item.stuName}} - {{item.stuNo}}
+            </view>
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+    <!-- footer_bar -->
+    <view class="footer_bar {{isIphoneX?'isIphoneX':''}}">
+      <view class="all_checkbox_warp">
+        <checkbox-group bindchange="handleAllCheckedChange">
+          <checkbox checked="{{allChecked}}"></checkbox>
+        </checkbox-group>
+        <view class="all_checkbox_text">全选</view>
+      </view>
+      <view class="right">
+        <view class="unified">
+          <!-- <checkbox-group>
+            <checkbox></checkbox>
+          </checkbox-group> -->
+          <text>统一评价</text>
+          <switch color="#26baee"></switch>
+        </view>
+        <button bindtap="handleConfirm">确认</button>
+      </view>
+    </view>
+  </block>
+  <!-- 查看评价 -->
+  <block wx:elif="{{tab[1].isActive}}">
+    <!-- stu_list -->
+    <view class="stu_list">
+      <view class="stu_warp" wx:for="{{stus}}" wx:key="stuNo" bindtap="handleTap" data-no="{{item.stuNo}}">
+        <view class="head_portrait">
+          <image src="{{item.headPortraitUrl}}"></image>
+        </view>
+        <view class="name_warp">
+          {{item.stuName}} - {{item.stuNo}}
+        </view>
+      </view>
+    </view>
+  </block>
+</tab>

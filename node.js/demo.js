@@ -103,7 +103,7 @@ app.get('/getPjContent', (req, res) => {
   })
 })
 
-app.listen(3000, '192.168.0.115')
+app.listen(3000, '127.0.0.1')
 
 function getStus() {
   let sql = 'SELECT s.sNo,s.sName,s.grade,s.classes,s.headPortraitUrl,s.checked,s.sSex,s.sAge,s.address,s.sIdNum,s.inDate,s.pName,s.pPhone FROM stus s';

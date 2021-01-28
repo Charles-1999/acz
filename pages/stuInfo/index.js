@@ -57,7 +57,7 @@ Page({
   getStus:function(){
     let stus = [];
     wx.request({
-      url: 'http://192.168.0.115:3000/stus',
+      url: 'http://127.0.0.1:3000/stus',
       method: 'GET',
       success: function(res){
         stus = res.data;

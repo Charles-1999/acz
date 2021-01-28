@@ -16,7 +16,7 @@ Page({
   getData: function(){
     let that = this;
     wx.request({
-      url: `http://192.168.0.115:3000/getPj?stuNo=${this.data.stuInfo.stuNo}`,
+      url: `http://127.0.0.1:3000/getPj?stuNo=${this.data.stuInfo.stuNo}`,
       method: 'GET',
       success:(res) => {
         this.setData({

@@ -131,7 +131,7 @@ Page({
     pjList.forEach(val=>{
       val.pj.forEach(v=>{
         wx.request({
-          url: `http://192.168.0.115:3000/inPj?subject='语文'&week=1&stuNo=${val.sNo}&contentId=${v.id}&stars=${v.stars}`,
+          url: `http://127.0.0.1:3000/inPj?subject='语文'&week=1&stuNo=${val.sNo}&contentId=${v.id}&stars=${v.stars}`,
           method: 'GET',
           success: ()=>{}
         })

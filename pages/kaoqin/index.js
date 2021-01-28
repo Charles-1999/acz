@@ -89,7 +89,7 @@ Page({
     let that = this;
     // 数据库插入数据
     wx.request({
-      url: `http://192.168.0.115:3000/inState?state=${id}&no=${no}`,
+      url: `http://127.0.0.1:3000/inState?state=${id}&no=${no}`,
       method: 'GET',
       success:(res)=> {
       },
@@ -99,7 +99,7 @@ Page({
     })
     // 数据库获取数据
     wx.request({
-      url: `http://192.168.0.115:3000/getState?no=${no}`,
+      url: `http://127.0.0.1:3000/getState?no=${no}`,
       method: 'GET',
       success: (res) => {
         const i = stuState.findIndex(v => v.stuNo == no);
@@ -121,7 +121,7 @@ Page({
     let nums = this.data.currentDatas;
     let that = this;
     wx.request({
-      url: `http://192.168.0.115:3000/getStateList?date=${date}&nums=${nums}`,
+      url: `http://127.0.0.1:3000/getStateList?date=${date}&nums=${nums}`,
       method: 'GET',
       success: (res) => {
         res.data.forEach(v=>{
@@ -151,7 +151,7 @@ Page({
     let that = this;
     new Promise((resolve, reject) => {
       wx.request({
-        url: 'http://192.168.0.115:3000/stus',
+        url: 'http://127.0.0.1:3000/stus',
         method: "GET",
         success: function(res) {
           // stus = res.data;
@@ -166,7 +166,7 @@ Page({
       res.forEach(v => {
         new Promise((resolve, reject) => {
           wx.request({
-            url: `http://192.168.0.115:3000/getState?no=${v.stuNo}`,
+            url: `http://127.0.0.1:3000/getState?no=${v.stuNo}`,
             method: "GET",
             success: function(res) {
               resolve(res.data)

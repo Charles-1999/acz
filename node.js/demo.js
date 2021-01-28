@@ -11,8 +11,8 @@ app.all('*', function (req, res, next) {
 let connection = db.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '123456',
-  database: 'acz'
+  password: '12345',
+  database: 'acz_mini'
 })
 connection.connect();
 
